@@ -1,0 +1,276 @@
+html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, sup, tt, var,
+    b, u, i, center,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, embed, 
+    figure, figcaption, footer, header, hgroup, 
+    menu, nav, output, ruby, section, summary,
+    time, mark, audio, video {
+        background: transparent;
+        border: 0;
+        margin: 0;
+        padding: 0;
+        vertical-align: baseline;
+        text-decoration: none;
+        font-family: calibri;
+    }
+    html {
+        font-size: 62.5%;
+        scroll-behavior: smooth;
+    }
+    hr {
+        width: 100%;
+        margin: 18px auto 20px auto;
+        background-color: #fff;
+        border-color: transparent;
+    }
+    section {
+        display: block;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        font-size: 100%;
+        vertical-align: baseline;
+        background: transparent;
+        padding-top: 80px;
+        padding-bottom: 100px;
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+    body {
+        background: #000;
+        font-family: calibri;
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 30px;
+        color: #838C95;
+    }
+    #nav-wrap {
+        font-weight: 700;
+        font-family: sans-serif;
+        width: 100%;
+        text-transform: uppercase;
+        letter-spacing: 2.5px;
+        margin: 0 auto;
+        z-index: 100;
+        position: fixed;
+        left: 0;
+        top: 0;
+        background-color: #3337;
+        overflow: hidden;
+
+    }
+    #nav-wrap ul, #nav-wrap li, #nav-wrap a {
+        margin: 0;
+        padding: 0;
+        border: none;
+        outline: none;
+    }
+    ul#nav li {
+        position: relative;
+        list-style: none;
+        height: 48px;
+        display: inline-block;
+    }
+    ul#nav li a {
+        display: inline-block;
+        padding: 8px 13px;
+        line-height: 32px;
+        text-decoration: none;
+        text-align: left;
+        color: #fff;
+    }
+    ul#nav li a:hover {
+        background-color: #ddd7;
+        color: black;
+    }
+
+	header {
+        position: relative;
+        height: 800px;
+        min-height: 500px;
+        width: 100%;
+        background: #161415 url(pic.jpg) no-repeat top center;
+        background-size: cover !important;
+        -webkit-background-size: cover !important;
+        text-align: center;
+        overflow: hidden;
+    }
+    header .banner {
+        padding-top: 270px;
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 auto;
+        width: 85%;
+        padding-bottom: 30px;
+        text-align: center;
+    }
+    header .banner-text h1 {
+        font: 90px/1.1em 'opensans-bold', sans-serif;
+        color: #fff;
+        letter-spacing: -2px;
+        margin: 0 auto 18px auto;
+        text-shadow: 0px 1px 3px rgba(0, 0, 0, .8);
+    }
+    header .banner-text h3 {
+        font: 30px/1.9em 'librebaskerville-regular', serif;
+        color: #fff;
+        margin: 0 auto;
+        width: 70%;
+        text-shadow: 0px 1px 2px rgba(0, 0, 0, .5);
+    }
+    header .banner-text h3 span,
+    header .banner-text h3 a {
+        color: #A8A8A8;
+    }
+    header .banner-text hr {
+        width: 10%;
+        margin: 18px auto 20px auto;
+        background-color: #fff;
+        border-color: transparent;
+    }
+    
+    #profil{
+        background-color: #2b2b2b;
+        background-color: white;
+        background-size: cover;
+        -webkit-background-size: cover;
+    }
+    #profil h1{
+        text-align: center;
+        font-size: 40px;
+        padding: 50px;
+    }
+    #profil p{
+        font-size: 120%;
+        color : #FFA500;
+
+    }
+    #profil p:hover{
+        font-size: 150%;
+
+    }
+    #profil .profile {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        align-items: right;
+        border-radius: 100%;
+
+    }
+    #profil li{
+        list-style: none;
+        text-align: center;
+        margin-right: 350px;
+        color : white;
+    }
+    #profil .isi_resume{
+        margin-right: 50px;
+    }  
+    #profil .pict{
+        position: relative;
+        padding: 0 20px;
+        min-height: 1px;
+        width: 209.46px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 20px;
+    }
+    .pic1{
+        width: 400px;
+        height: 300px;
+        margin-left: 0;
+    }
+    .pic2{
+        width: 400px;
+        height: 300px;
+        margin-left: 110px;
+        position: center;
+    }
+
+    #resume{
+        background-color: #e9ebee;
+        color : #696f78;
+    }
+    #resume h1{
+        text-align: center;
+        font-size: 40px;
+        padding: 50px;
+    }
+    .baris{
+        padding-top: 40px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        display: flex;
+    }
+    .title_resume{
+        font-size: 200%;
+        width: 15%;
+        flex: 1;
+        margin-left: 40px;
+    }
+    .isi_resume{
+        padding-left: 15%;
+        padding-bottom: 20px;
+        width: 70%; 
+    }
+    #resume li{
+        list-style: none;
+    }
+
+    #por{
+        background-color: #fff;
+    }
+    #por h1{
+        text-align: center;
+        font-size: 40px;
+        padding-bottom: 50px;
+    }
+    #kotak_por{
+        width: 100%;
+        border: 1px solid transparent;
+        padding-bottom: 10px;
+    }
+    .title_por{
+        padding-top: 4px;
+        letter-spacing: 2px;
+        font-size: 200%;
+        width: 5%;
+        flex: 1; 
+    }
+    .isi_por{
+        padding-bottom: 20px;
+        width: 75%; 
+    }
+    .foto{
+        width: 30%;
+        border: 3px solid transparent;
+        border-radius: 2px;
+        padding: 2px;
+    }
+    .foto:hover{
+        width: 30%;
+        border: 3px solid #ddd;
+        border-radius: 2px;
+        padding: 2px;
+    }
+    #contact{
+        background-color: #191919;
+    }
+    #contact p{
+        padding-left: 10px;
+    }
+    #contact h1{
+        text-align: center;
+        font-size: 40px;
+        padding-bottom: 80px;
+    }
+
+
+
