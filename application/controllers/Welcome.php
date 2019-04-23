@@ -35,9 +35,9 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('input');
 	}
-	public function akun()
+	public function editakun()
 	{
-		$this->load->view('profil');
+		$this->load->view('editPROFILE');
 	}
 
 }
