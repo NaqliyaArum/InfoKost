@@ -1,0 +1,67 @@
+.heading {
+
+	text-align : center;
+	color: white;
+	background-color: orange;
+	font-size: 40px;
+}
+
+.content{
+	margin-top: 10px;
+	font-family: Arial Narrow;
+	font-size: 30px;
+	background-color:BlanchedAlmond;
+	width:400%;
+	height:400%;
+	border-radius: 10px;
+}
+
+body{
+	background-image: url('assets/img/img.jpg');
+	font-size: 50px;
+	font-family: Arial Rounded MT Bold;
+}
+
+input[type=submit]{
+	background-color: orange;
+	color: white;
+	padding: 12px 20px;
+	border :none;
+	border-radius : 4px;
+	cursor: pointer;
+	float: right;
+}
+
+input[type=submit]:hover{
+	background-color: blue;
+}
+
+input[type=reset]{
+	background-color: orange;
+	color: white;
+	padding: 12px 20px;
+	border :none;
+	border-radius : 4px;
+	cursor: pointer;
+	float: right;
+}
+
+input[type=reset]:hover{
+	background-color: blue;
+}
+
+
+form {
+	display: flex;
+	position: absolute;
+	margin-left: 320px;
+	width: 700px;
+}
+input[type=text], input[type=checkbox]{
+	box-sizing: border-box;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	border-bottom: 3px solid #ddd;
+	outline: none;
+}
