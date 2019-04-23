@@ -9,14 +9,14 @@
 <body>
 
 <div class="container">
-  <form>
+  <form action="/action_page.php">
     <div class="row">
       <div class="col-25">
         <label for="name">Nama Lengkap</label>
       </div>
       <div class="col-75">
-        <input type="text" id="fname" name="name" placeholder="Nama Pertama">
-        <input type="text" id="fname" name="name" placeholder="Nama Terakhir">
+        <input type="text" id="fname" name="name" placeholder="First Name">
+        <input type="text" id="fname" name="name" placeholder="Last Name">
       </div>
     </div>
     <div class="row">
@@ -25,14 +25,14 @@
       </div>
       <div class="col-75">
         <select id="city" name="city">
-          <option value="jkt">Laki-Laki</option>
-          <option value="sby">Perempuan</option>
+          <option value="lk">Laki-Laki</option>
+          <option value="pr">Perempuan</option>
         </select>
       </div>
     </div>
     <div class="row">
       <div class="col-25">
-        <label for="status">No. Handphone</label>
+        <label for="tlp">No. Handphone</label>
       </div>
       <div class="col-75">
         <input type="text" id="fname" name="name" placeholder="xxxx xxxx">
@@ -48,10 +48,10 @@
     </div>
     <div class="row">
       <div class="col-25">
-        <label for="status">Password</label>
+        <label for="pass">Password</label>
       </div>
       <div class="col-75">
-        <input type="text" id="fname" name="name" placeholder="Password">
+        <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
       </div>
     </div>
     <div class="row">
