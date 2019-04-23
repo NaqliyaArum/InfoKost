@@ -2,12 +2,11 @@
 <html>
 <head>
   <title>Edit Akun - InfoKos</title>
-  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/PROFILEedit.css')?>">
 </head>
 <body>
-
+<body style="background-image: url(assets/image/kost.jpg)"></body>
 <div class="container">
   <form action="/action_page.php">
     <div class="row">
