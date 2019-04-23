@@ -9,7 +9,7 @@
     <div>
         <h2 class="heading">Formulir Pendaftaran Kostan</h2>
     </div>
-    <form action="insert.php" method="POST">
+    <form action="<?php echo base_url('/index.php/crud/tambah_aksi')?>" method="POST">
         <article class="content">
             <table border="0"  cellpadding = "5" cellspacing="4">
                 <tr>
