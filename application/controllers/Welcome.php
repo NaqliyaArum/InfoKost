@@ -35,6 +35,10 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('input');
 	}
+	public function akun()
+	{
+		$this->load->view('profil');
+	}
 
 }
 
