@@ -31,4 +31,10 @@ class Welcome extends CI_Controller {
 			$this->load->view('register',$data);
 		}
 	}	
+	public function inputdata()
+	{
+		$this->load->view('input');
+	}
+
 }
+
