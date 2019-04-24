@@ -17,7 +17,7 @@ class Welcome extends CI_Controller {
 	public function register()
 	{
 		$data['judul'] = 'Registrasi';
-		$this->form_validation->set_rules('fisrt','First','required');
+		$this->form_validation->set_rules('first','First','required');
 		$this->form_validation->set_rules('last','Last','required');
 		$this->form_validation->set_rules('Gender','gender','required');
 		$this->form_validation->set_rules('alamat','Alamat','required');
