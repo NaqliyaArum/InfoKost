@@ -2,16 +2,17 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class insert extends CI_Model {
-	public function GetUser(){
-		$arrData = array(
-			'First' => $_POST['first'],
-			'Last' => $_POST['last'],
-			'gender' => $_POST['Gender'],
-			'Alamat' => $_POST['alamat'],
-			'Handphone' => $_POST['handphone'],
-			'Password' => $_POST['password'],
-		);
-		$this->db->insert('user',$arrData);
+	public function TambahUser()
+	{
+		$data = [
+			"First" => $this->input->post('first', true),
+			"Last" => $this->input->post('last', true),
+			"gender" => $this->input->post('Gender', true),
+			"Alamat" => $this->input->post('alamat', true),
+			"Handphone" => $this->input->post('handphone', true),
+			"Password" => $this->input->post('password', true),
+		];
+		$this->db->insert('user',$data);
 	}
 	public function Daftar(){
     
