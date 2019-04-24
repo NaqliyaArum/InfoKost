@@ -24,13 +24,15 @@ class Welcome extends CI_Controller {
 		$this->form_validation->set_rules('handphone','Handphone','required');
 		$this->form_validation->set_rules('password','Password','required');
 
-		if($this->form_validation->run() != false){
-			$this->insert->GetUser();
-			header("Location: ".base_url('/index.php/Welcome/index'));
-		}else{
-			$this->load->view('register',$data);
+		if ($this->form_validation->run() == false) {
+			$this->load->view('register', $data);
+		} else {
+			$this->insert->TambahUser();
+			if ($this) {
+				redirect('Welcome');
+			}
 		}
-	}	
+	}
 	public function inputdata()
 	{
 		$this->load->view('input');
