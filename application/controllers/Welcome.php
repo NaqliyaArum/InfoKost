@@ -5,14 +5,18 @@ class Welcome extends CI_Controller {
 	public function __construct()
    	{
         parent::__construct();
-
-        $this->load->model('insert');
+        	parent::__construct();
+		$this->load->model('insert');
 		$this->load->library('form_validation');
-   	}
+		$this->load->model('m_login');
+	}
 	public function index()
 	{
+		$this->load->view('index');
+	}
+	public function login()
+	{
 		$this->load->view('login');
-
 	}
 	public function register()
 	{
@@ -29,9 +33,31 @@ class Welcome extends CI_Controller {
 		} else {
 			$this->insert->TambahUser();
 			if ($this) {
-				redirect('Welcome');
+					redirect('Welcome');
 			}
 		}
+	}
+	public function proses_login(){
+        $no = $this->input->post('No');
+        $pass = $this->input->post('Pass');
+		$hasil= $this->m_login->login($no,$pass);
+		if ($hasil['exist']>0) {
+			$data = $this->m_login->profile($no,$pass);
+			$data_sess = array(
+				'first'=> $data['First'] ,
+				'last' => $data['Last'],
+				'Gender'=> $data['gender'],
+				'alamat'=> $data['Alamat'],
+				'No' => $data['Handphone'],
+				'Pass' => $data['Password']
+			);
+			$this->session->set_userdata($data_sess);
+			echo "Berhasil";
+		}
+		else {
+			$this->session->set_flashdata('message', 'login anda salah, silahkan login kembali');			
+			redirect('Welcome');
+		}	
 	}
 	public function inputdata()
 	{
