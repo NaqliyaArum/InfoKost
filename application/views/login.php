@@ -21,7 +21,7 @@
     </div>
     <nav>
       <ul>
-        <li><a href="login.html">< Kembali ke beranda</a></li>
+        <li><a href="<?php echo base_url('index.php/Welcome/index/');?>">< Kembali ke beranda</a></li>
       </ul>
     </nav>
 </body>
