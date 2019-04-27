@@ -14,8 +14,9 @@
          <ul id="nav" class="nav">
             <li class="current"><a class="smoothscroll" href=#home>Home</a></li>
             <li><a class="smoothscroll" href=#profil>Profile</a></li>
-	        <li><a class="smoothscroll" href=#resume>Resume</a></li>
+	    <li><a class="smoothscroll" href=#resume>Resume</a></li>
             <li><a class="smoothscroll" href=#contact>Contact</a></li>
+	    <li><a class="smoothscroll" href=#login>Login</a></li>
          </ul> 
       </nav>
 
