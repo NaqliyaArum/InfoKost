@@ -4,11 +4,11 @@
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/main.css')?>">
 </head>
 <body>
-    <form style="background-image: url('assets/img/img.jpg')">
+    <body style="background-image: url('assets/img/img.jpg')"></body>
     <div>
         <h2 class="heading">Formulir Pendaftaran Kostan</h2>
     </div>
-    <form action="<?php echo base_url(). 'crud/tambah_aksi'; ?>" method="POST">
+    <form action="<?php echo base_url('/index.php/Crud/tambah_aksi'); ?>" method="POST">
         <article class="content">
             <table border="0"  cellpadding = "5" cellspacing="4">
                 <tr>
