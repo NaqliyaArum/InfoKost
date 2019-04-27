@@ -25,12 +25,12 @@
         <input type="password"  name="password"  placeholder="Password" required><br><br>
         <br><br>
         <button type="submit" name="Insert">Register</button>
-        <h3>Don't have account ? <a class="aclk" href="<?php echo base_url('index.php/Welcome/index/');?>">Click here!</a></h3>
+        <h3>already have an account ? <a class="aclk" href="<?php echo base_url('index.php/Welcome/login/');?>">Click here!</a></h3>
       </form>
     </div>
     <nav>
       <ul>
-        <li><a href="login.html">< Kembali ke beranda</a></li>
+        <li><a href="<?php echo base_url('index.php/Welcome/index/');?>">< Kembali ke beranda</a></li>
       </ul>
     </nav>
 </body>
