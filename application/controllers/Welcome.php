@@ -65,7 +65,7 @@ class Welcome extends CI_Controller {
 	}
 	public function editakun($id)
 	{
-		$data['judul'] = 'Form Edit Data Akun';
+		$data['judul'] = 'Form Edit Data User';
 		$this->form_validation->set_rules('First','First','required');
 		$this->form_validation->set_rules('Last','Last','required');
 		$this->form_validation->set_rules('gender','gender','required');
