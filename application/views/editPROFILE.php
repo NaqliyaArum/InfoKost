@@ -14,8 +14,8 @@
         <label for="name">Nama Lengkap</label>
       </div>
       <div class="col-75">
-        <input type="text" id="fname" name="name" placeholder="First Name">
-        <input type="text" id="fname" name="name" placeholder="Last Name">
+        <input type="text" id="fname" name="First" placeholder="First Name">
+        <input type="text" id="fname" name="Last" placeholder="Last Name">
       </div>
     </div>
     <div class="row">
@@ -23,7 +23,7 @@
         <label for="city">Gender</label>
       </div>
       <div class="col-75">
-        <select id="city" name="city">
+        <select id="gd" name="gender">
           <option value="lk">Laki-Laki</option>
           <option value="pr">Perempuan</option>
         </select>
@@ -34,7 +34,7 @@
         <label for="tlp">No. Handphone</label>
       </div>
       <div class="col-75">
-        <input type="text" id="fname" name="name" placeholder="xxxx xxxx">
+        <input type="text" id="fname" name="Handphone" placeholder="xxxx xxxx">
       </div>
     </div>
     <div class="row">
@@ -42,7 +42,7 @@
         <label for="almt">Alamat</label>
       </div>
       <div class="col-75">
-        <textarea id="almt" name="alm" placeholder="" style="height:125px"></textarea>
+        <textarea id="almt" name="Alamat" placeholder="" style="height:125px"></textarea>
       </div>
     </div>
     <div class="row">
@@ -50,7 +50,7 @@
         <label for="pass">Password</label>
       </div>
       <div class="col-75">
-        <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+        <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="Password">
       </div>
     </div>
     <div class="row">
