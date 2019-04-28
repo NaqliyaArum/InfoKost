@@ -8,7 +8,7 @@
 <body>
 <body style="background-image: url(assets/image/kost.jpg)"></body>
 <div class="container">
-  <form action="/action_page.php">
+  <form action="" method="post">
     <div class="row">
       <div class="col-25">
         <label for="name">Nama Lengkap</label>
