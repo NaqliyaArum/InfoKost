@@ -63,10 +63,31 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('input');
 	}
-	public function editakun()
+	public function editakun($id)
 	{
-		$this->load->view('editPROFILE');
-	}
+		$data['judul'] = 'Form Edit Data Akun';
+		$this->form_validation->set_rules('First','First','required');
+		$this->form_validation->set_rules('Last','Last','required');
+		$this->form_validation->set_rules('gender','gender','required');
+		$this->form_validation->set_rules('Alamat','Alamat','required');
+		$this->form_validation->set_rules('Handphone','Handphone','required');
+		$this->form_validation->set_rules('Password','Password','required');
 
+		if ($this->form_validation->run() == false) {
+			$data['user'] = $this->M_akun->getUserById($id);
+			$this->load->view('profil');
+
+		} else {
+			$this->db->where('id_user', $id);
+			$this->M_akun->ubahDatUser($id);
+			if ($this->db->affected_rows()) {
+				$this->session->set_flashdata('flash','data changed succesfully');
+				redirect('C_akun');
+			} else {
+				$this->session->set_flashdata('flash','data changed failed');
+				redirect('C_akun');
+			}
+		}
+	}
 }
 
