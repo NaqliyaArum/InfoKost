@@ -113,18 +113,4 @@
     </section>
 
 </body>
-
-<!-- <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyBVd4OcqJY6NcLlIJtXTytlO7Y15nr7XN0",
-    authDomain: "cv-webpro-6aa38.firebaseapp.com",
-    databaseURL: "https://cv-webpro-6aa38.firebaseio.com",
-    projectId: "cv-webpro-6aa38",
-    storageBucket: "cv-webpro-6aa38.appspot.com",
-    messagingSenderId: "151453043794"
-  };
-  firebase.initializeApp(config);
-</script> -->
 </html>
