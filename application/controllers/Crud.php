@@ -58,13 +58,57 @@ class Crud extends CI_Controller{
      			//$this->session->set_flashdata('message','ditambahkan');
      			//echo "yeeeeeeee berhasil berhasil horeeee";
      			$this->load->view('v_tampil');
-   }
-}
-	function hapus($id){
-		$where = array('id' => $id);
-		$this->insert->hapus_data($where,'datakost');
-		redirect('Crud/index');
+   				}
+			}
 	}
+	
+	function hapus($id){
+		$this->insert->hapusdatakost($id);
+		if ($this->db->affected_rows()){
+		    $this->session->set_flashdata('flash','dihapus');
+		    redirect('Crud/index');
+		}else{
+			$this->session->set_flashdata('flash','failed');
+			redirect('Crud/index');
+		}
+		
+	}
+	
+	public function ubah($id){
+		$data['judul'] = 'form ubah data kost';
+		$this->form_validation->set_rules('jk_input','jk_input','required');
+		$this->form_validation->set_rules('name_input','name_input','required');
+		$this->form_validation->set_rules('loc_input','loc_input','required');
+		$this->form_validation->set_rules('fk_input','fk_input','required');
+		$this->form_validation->set_rules('Luas_input','Luas_input','required');
+		$this->form_validation->set_rules('mnd_input','mnd_input','required');
+		$this->form_validation->set_rules('fp_input','fp_input','required');
+		$this->form_validation->set_rules('al_input','al_input','required');
+		$this->form_validation->set_rules('dpk_input','dpk_input','required');
+		$this->form_validation->set_rules('kbs_input','kbs_input','required');
+		$this->form_validation->set_rules('kl_input','kl_input','required');
+		$this->form_validation->set_rules('kb_input','kb_input','required');
+		$this->form_validation->set_rules('dk_input','dk_input','required');
+		$this->form_validation->set_rules('nohp_input','nohp_input','required');
+		//$this->form_validation->set_rules('image_kost','image_kost');
+		if ($this->form_validation->run() == false){
+			$data['datakost'] = $this->model->getubahkost($id);
+			$this->load->view('template/header', $data);
+			$this->load->view('ubah', $data);
+			$this->load->view('template/footer', $data);	
+		
+		}else{
+			$this->db->where('id', $id);
+			$this->model->ubahdatadokter($id);
+			if($this->db->affected_rows()){
+				$this->session->set_flashdata('flash', 'data diubah');
+				redirect('Crud/index');
+			}else{
+				$this->session->set_flashdata('flash', 'data change failed');
+				redirect('Crud/index');
+			}		
+		}
+	
+		
 
-}
 }
