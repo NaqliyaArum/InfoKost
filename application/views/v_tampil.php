@@ -51,7 +51,7 @@
                         <td class="text-center"><?= $k['fk_input']; ?></td>
                         <td class="text-center">
                             <a href="<?= base_url(); ?>index.php/Crud/hapus/<?= $k['id_kost'] ?>" class="badge badge-danger float-center" onclick="return confirm('Apakah anda yakin menghapus data ini?');" ?>hapus</a>
-                            <a href="<?= base_url(); ?>index.php/Crud/ubah/<?= $k['id_kost'] ?>" class="badge badge-success float-center" ?>ubah</a>
+                            <a href="<?= base_url(); ?>index.php/Crud/ubah/<?= $k['id_kost'] ?>" class="badge badge-success float-center" onclick="return confirm('Apakah anda yakin mengubah data ini?');" ?>ubah</a>
                         </td>
                     </tr>
                     <?php endforeach ?>
