@@ -27,6 +27,7 @@
     <div class="row mt-5">
         <div class="col">
             <h3 class="text-center">Daftar Kost</h3>
+            <a href="<?php echo base_url('/index.php/Crud/tambah')?>"  class="tombol" onclick="return confirm('Apakah anda ingin menambahkan data kost baru?');" ?>+ Tambah Data Baru</a>
             <?php if (empty($kost)) : ?>
             <div class="alert alert-danger" role="alert">
                 Data tidak ditemukan
@@ -49,8 +50,8 @@
                         <td class="text-center"><?= $k['loc_input']; ?></td>
                         <td class="text-center"><?= $k['fk_input']; ?></td>
                         <td class="text-center">
-<!--                          <a href="<?= base_url(); ?>index.php/Welcome/hapus/<?= $k['id_kost'] ?>" class="badge badge-danger float-center" onclick="return confirm('Apakah anda yakin menghapus data ini?');" ?>hapus</a>
-                            <a href="<?= base_url(); ?>index.php/Welcome/ubah/<?= $k['id_kost'] ?>" class="badge badge-success float-center" ?>ubah</a> -->
+                            <a href="<?= base_url(); ?>index.php/Crud/hapus/<?= $k['id_kost'] ?>" class="badge badge-danger float-center" onclick="return confirm('Apakah anda yakin menghapus data ini?');" ?>hapus</a>
+                            <a href="<?= base_url(); ?>index.php/Crud/ubah/<?= $k['id_kost'] ?>" class="badge badge-success float-center" ?>ubah</a>
                         </td>
                     </tr>
                     <?php endforeach ?>
