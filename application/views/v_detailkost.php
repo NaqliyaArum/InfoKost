@@ -6,7 +6,22 @@
 </head>
 <body style ="background-image: url('assets/image/sky.jpg');">
 	<div class="wrap">
-        <?php $this->load->view('nav'); ?>
+        <nav class="menu">
+	    <ul>
+		<li>
+		    <a href="<?php echo base_url(); ?>index.php/home">Home</a>
+		</li>
+		<li>
+		    <a href="<?php echo base_url(); ?>index.php/akun">Profil</a>
+		</li>
+		<?php if($this->session->userdata('status') != "login"){ ?>
+		    <li style="float:right"> <a class="smoothscroll" href="<?php echo base_url(); ?>index.php/login"> Login </a> </li>
+		<?php }else{?>
+		    <li style="float:right"> <a class="smoothscroll" href="<?php echo base_url(); ?>index.php/login/logout"> Logout(<?php echo $this->session->userdata('nama') ?>) </a> </li>
+		<?php }?>
+		</li>
+	    </ul>
+	</nav>
 		<aside class="sidebar">
 			<div class="widget">
 				<h2>Welcome</h2>
