@@ -66,10 +66,10 @@ class Crud extends CI_Controller{
 		$this->insert->hapusdatakost($id);
 		if ($this->db->affected_rows()){
 		    $this->session->set_flashdata('flash','dihapus');
-		    redirect('Crud/index');
+		    redirect('Crud/tampil');
 		}else{
 			$this->session->set_flashdata('flash','failed');
-			redirect('Crud/index');
+			redirect('Crud/tampil');
 		}
 		
 	}
@@ -102,10 +102,10 @@ class Crud extends CI_Controller{
 			$this->model->ubahdatakost($id);
 			if($this->db->affected_rows()){
 				$this->session->set_flashdata('flash', 'data diubah');
-				redirect('Crud/index');
+				redirect('Crud/tampil');
 			}else{
 				$this->session->set_flashdata('flash', 'data change failed');
-				redirect('Crud/index');
+				redirect('Crud/tampil');
 			}		
 		}
 	
