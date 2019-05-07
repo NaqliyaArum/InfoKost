@@ -35,7 +35,7 @@ public function __construct()
 		} else {
 			$this->insert->TambahUser();
 			if ($this) {
-					redirect('Welcome');
+					redirect('login');
 			}
 		}
 	}
