@@ -45,3 +45,4 @@ class C_akun extends CI_Controller{
 		}
 	}
 }
+?>
