@@ -13,7 +13,7 @@
     <?php endif; ?>
     <div class="row mt-3">
         <div class="col md-6">
-            <form action="<?php echo base_url('index.php/Welcome/admin');?>" method="post">
+            <form action="<?php echo base_url('index.php/Crud/tampil');?>" method="post">
                 <div class="input-group" style="margin-top : 50px">
                     <input type="text" class="form-control" placeholder="Cari data kost ... " name="keyword" style="margin-top :50px">
                     <div class="input-group-append">
