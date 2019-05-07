@@ -98,8 +98,8 @@ class Crud extends CI_Controller{
 			$this->load->view('template/footer', $data);	
 		
 		}else{
-			$this->db->where('id', $id);
-			$this->model->ubahdatadokter($id);
+			$this->db->where('id_kost', $id);
+			$this->model->ubahdatakost($id);
 			if($this->db->affected_rows()){
 				$this->session->set_flashdata('flash', 'data diubah');
 				redirect('Crud/index');
