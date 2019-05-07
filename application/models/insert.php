@@ -51,4 +51,10 @@ class insert extends CI_Model {
 	{
 		return $this->db->get_where('datakost',array('id_kost'=> $id))->result_array();
 	}
+	
+	public function hapusdatakost($id)
+	{
+		$this->db->delete('datakost',array('id_kost'=>$id));
+	}
+	
 }
