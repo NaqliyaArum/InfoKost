@@ -23,6 +23,10 @@ class Crud extends CI_Controller{
 	{
 		$data['judul'] = 'Daftar Kost';
 		$data['kost'] = $this->insert->tampil_data()->result_array();
+		$data['kost'] = $this->insert->getallkost()->result_array();
+		if ($this->input->post('keyword')) {
+			$data['kost'] = $this->insert->cariDatakost();
+		}
 		$this->load->view('templates/header');
 		$this->load->view('v_tampil', $data);
 		$this->load->view('templates/footer');
