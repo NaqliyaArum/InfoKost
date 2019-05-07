@@ -54,7 +54,7 @@ public function __construct()
 				'Pass' => $data['Password']
 			);
 			$this->session->set_userdata($data_sess);
-			echo "Berhasil";
+			redirect('Crud/tampil');
 		}
 		else {
 			$this->session->set_flashdata('message', 'login anda salah, silahkan login kembali');			
