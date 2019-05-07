@@ -2,22 +2,24 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Welcome extends CI_Controller {
-	public function __construct()
-   	{
-        parent::__construct();
-        	parent::__construct();
+public function __construct()
+	{
+		parent::__construct();
 		$this->load->model('insert');
 		$this->load->library('form_validation');
 		$this->load->model('m_login');
 	}
+
 	public function index()
 	{
 		$this->load->view('index');
 	}
+
 	public function login()
 	{
 		$this->load->view('login');
 	}
+
 	public function register()
 	{
 		$data['judul'] = 'Registrasi';
