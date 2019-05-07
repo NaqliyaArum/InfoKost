@@ -19,6 +19,14 @@ class Crud extends CI_Controller{
 	function tambah(){
 		$this->load->view('v_input');
 	}
+	public function tampil()
+	{
+		$data['judul'] = 'Daftar Kost';
+		$data['kost'] = $this->insert->tampil_data()->result_array();
+		$this->load->view('templates/header');
+		$this->load->view('v_tampil', $data);
+		$this->load->view('templates/footer');
+	}
 	function tambah_aksi(){
 		$data['judul'] = 'form kostan';
 		$this->form_validation->set_rules('jk_input','jk_input','required');
@@ -44,7 +52,7 @@ class Crud extends CI_Controller{
   		} else {
    			$this->insert->daftar();
 				if ($this) {
-     			$this->session->set_flashdata('message','ditambahkan');
+     			//$this->session->set_flashdata('message','ditambahkan');
      			//echo "yeeeeeeee berhasil berhasil horeeee";
      			$this->load->view('v_tampil');
    }
