@@ -9,7 +9,7 @@ $query = mysqli_query($connection,"SELECT * FROM my_kost");
 <body>
 	<form action="" method=""></form>
 	<center><h1>Tampilan Data</h1></center>
-	<!-- <center><?php echo anchor('crud/tambah','Tambah Data'); ?></center> -->
+	<center><?php echo anchor('crud/tambah','Tambah Data'); ?>
 	<table style="margin:20px auto;" border="1">
 		<tr>
 			<th>Jenis kosan</th>
