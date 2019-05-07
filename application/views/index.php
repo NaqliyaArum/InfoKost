@@ -16,7 +16,7 @@
             <li><a class="smoothscroll" href=#profil>Profile</a></li>
 	    <li><a class="smoothscroll" href=#resume>Resume</a></li>
             <li><a class="smoothscroll" href=#contact>Contact</a></li>
-	    <li><a class="smoothscroll" href=#login>Login</a></li>
+	    <li><a class="smoothscroll" href="<?php echo base_url('index.php/Welcome/login/');?>">Login Pengguna</a></li>
          </ul> 
       </nav>
 
