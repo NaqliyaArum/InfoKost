@@ -86,6 +86,9 @@ ALTER TABLE `datakost`
 ALTER TABLE `user`
   ADD PRIMARY KEY (`id_user`),
   ADD UNIQUE KEY `id_user` (`id_user`);
+  
+ALTER TABLE `user` 
+  ADD UNIQUE(`Handphone`);
 
 --
 -- AUTO_INCREMENT for dumped tables
