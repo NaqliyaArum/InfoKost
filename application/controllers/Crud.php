@@ -92,7 +92,7 @@ class Crud extends CI_Controller{
 		$this->form_validation->set_rules('nohp_input','nohp_input','required');
 		//$this->form_validation->set_rules('image_kost','image_kost');
 		if ($this->form_validation->run() == false){
-			$data['datakost'] = $this->model->getubahkost($id);
+			$data['datakost'] = $this->model->getKostById($id);
 			$this->load->view('template/header', $data);
 			$this->load->view('ubah', $data);
 			$this->load->view('template/footer', $data);	
