@@ -22,6 +22,7 @@
         <li><a href="<?php echo base_url('index.php/Welcome/editakun');?>">Akun</a></li>
         <li><a href="<?php echo base_url('index.php/Crud/tambah');?>">Tambah Kost</a></li>
         <li><a href="<?php echo base_url('index.php/Crud/tampil');?>">Daftar Kost</a></li>
+        <li><a href="<?php echo base_url('index.php/listkost');?>"List kost</a></li>
       </ul>
     </nav>
 </body>
