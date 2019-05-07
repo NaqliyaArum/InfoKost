@@ -57,7 +57,7 @@ class Crud extends CI_Controller{
 				if ($this) {
      			//$this->session->set_flashdata('message','ditambahkan');
      			//echo "yeeeeeeee berhasil berhasil horeeee";
-     			$this->load->view('v_tampil');
+     			redirect('Crud/tampil');
    				}
 			}
 	}
@@ -92,14 +92,11 @@ class Crud extends CI_Controller{
 		$this->form_validation->set_rules('nohp_input','nohp_input','required');
 		//$this->form_validation->set_rules('image_kost','image_kost');
 		if ($this->form_validation->run() == false){
-			$data['kost'] = $this->model->getKostById($id);
-			$this->load->view('template/header', $data);
-			$this->load->view('ubah', $data);
-			$this->load->view('template/footer', $data);	
-		
+			$data['kost'] = $this->insert->getKostById($id);
+			redirect('Crud/tampil');		
 		}else{
 			$this->db->where('id_kost', $id);
-			$this->model->ubahdatakost($id);
+			$this->insert->ubahdatakost($id);
 			if($this->db->affected_rows()){
 				$this->session->set_flashdata('flash', 'data diubah');
 				redirect('Crud/tampil');
