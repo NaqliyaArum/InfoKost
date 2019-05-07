@@ -37,7 +37,18 @@ class insert extends CI_Model {
 		$this->db->insert('datakost',$data);
     }
 
-    function tampil_data(){
+    	function tampil_data(){
 		return $this->db->get('datakost');
+	}
+    	public function cariDataKost()
+    	{
+		$keyword = $this->input->post('keyword', true);
+		$this->db->from('datakost');
+		$this->db->like('name_input',$keyword);
+		return $this->db->get()->result_array();
+    	}
+	public function getKostById($id)
+	{
+		return $this->db->get_where('datakost',array('id_kost'=> $id))->result_array();
 	}
 }
